@@ -37,7 +37,12 @@
   server.port=9090
   spring.application.name=config-server
   ### 本地仓库 git URL配置
-  spring.cloud.config.server.git.uri=file:/Users/chenmingming/workspace/java/my/config
+  #spring.cloud.config.server.git.uri=file:/Users/chenmingming/workspace/java/my/config
+  
+  ### 配置远程仓库
+  spring.cloud.config.server.git.uri=https://gitee.com/hrnd/git-config
+  spring.cloud.config.server.git.username=username
+  spring.cloud.config.server.git.password=password
   
   ## 关闭 Actuator 安全检查
   #management.security.enabled=false
