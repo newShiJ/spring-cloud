@@ -518,3 +518,40 @@ public class MyHealthIndicator extends AbstractHealthIndicator {
 ```
 
 * 最后的作用 就是可以任意的输出你希望有的健康检查指标帮助定位问题
+
+## 开启安全检查
+
+* 添加`Spring Security` 依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+
+* 在启动日志中会有一段默认秘钥 用户名 user
+
+```
+2018-09-10 11:14:42.716  INFO 29014 --- [           main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 0309e3ba-abb0-461a-9dd5-c7da90d4619f
+```
+
+* 将关闭安全检查的代码注释
+* 添加自定义的用户名和密码，一般也不会去使用这种方式 每次启动去看日志
+
+```properties
+### 配置访问账号
+security.user.name=cmm
+security.user.password=aa123
+
+### config 账号
+spring.cloud.config.username=asd
+spring.cloud.config.password=9999
+```
+
+
+
+
+
