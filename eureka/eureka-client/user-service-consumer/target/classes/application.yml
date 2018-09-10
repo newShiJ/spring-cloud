@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-service-consumer
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      ### 默认 Eureka 服务器地址
+      defaultZone: http://localhost:8761/eureka
+
+### 关闭安全检查
+management:
+  security:
+    enabled: false
