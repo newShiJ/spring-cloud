@@ -9,8 +9,15 @@ import org.springframework.boot.actuate.health.Health;
  */
 public class MyHealthIndicator extends AbstractHealthIndicator {
 
+    /**
+     *
+     * @param builder
+     * @throws Exception
+     */
     @Override
     protected void doHealthCheck(Health.Builder builder) throws Exception {
+        Integer a;
+        int a_s1l;
         builder.down().withDetail("MyHealthIndicator", "Go Go Go");
     }
 }
