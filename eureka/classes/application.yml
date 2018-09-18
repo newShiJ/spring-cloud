@@ -1,0 +1,18 @@
+### Eureka port
+server:
+  port: 8761
+
+spring:
+  application:
+    ### 服务名称
+    name: spring-cloud-eureka-server
+
+eureka:
+  client:
+    ### 没有必要去再检索服务
+    fetch-registry: false
+    ### 关闭自我注册
+    register-with-eureka: false
+    ### Eureka Server 用于客户端注册
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka
